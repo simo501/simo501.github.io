@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<title>alcol</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    p {
+        font-family: Arial;
+        font-style: normal;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: Arial;
+        font-style: normal;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    h2 {
+        font-family: Arial;
+        font-weight: 200;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    button {
+        font-family: Arial;
+        font-style: normal;
+        text-align: center;
+        font-size: 18px;
+        background-color: #725200;
+    }
+
+
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<html>
+
+<body style="background-color: #200046;">
+    <h1 id="title">DRINK ROLL</h1>
+
+    <h2 class="center" style="width: 75%; color: #725200; margin-top: 15%; margin-bottom: 15%;" id="cocktail">cocktail
+    </h2>
+
+    <button class="center" style="width: 35%; height: 35%;" onclick="estrazione()">ROLL</button>
+
+
+    <footer style="margin-top: 10%;">
+        <p style="text-align: center; color: #000; letter-spacing: 0.16em; font-size: 12px;">
+            since 2003<br>
+            all rights reserved
+        </p>
+    </footer>
+</body>
+
+<script type="text/javascript">
+    function estrazione() {
+        let cocktail = ['Negroni', 'Boulevardier', 'Long Island', 'Mojito', 'Cuba Libre', 'Margarita', 'Bloody Mary', 'Black Russian',
+            'Martini', 'Spritz', 'Piña Colada', 'Caipirinha', 'Cosmopolitan']
+
+            var n = Math.floor(Math.random() * (12 - 0 + 1)) + 0; // var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+            document.getElementById("cocktail").innerHTML = cocktail[n];
+    }
+
+    document.getElementById("title").onclick = function () {
+        window.location.replace = "https://wwsimone.github.io/index.html";
+    };
+</script>
+
+</html>
