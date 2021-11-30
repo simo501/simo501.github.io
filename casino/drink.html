@@ -37,11 +37,19 @@
         font-family: Arial;
         font-style: normal;
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
         background-color: #725200;
     }
 
-
+    @media all and (max-width: 600px) and (orientation: portrait) {
+        button {
+            font-family: Arial;
+            font-style: normal;
+            text-align: center;
+            font-size: 20px;
+            background-color: #725200;
+        }
+    }
 
     .center {
         display: block;
@@ -71,12 +79,9 @@
 <body style="background-color: #200046;">
     <img class="img-title center" src="../imgs/simone-title.png" id="home-title">
 
-    <h1 id="title" style="margin-top: -5%;">..:DRINK ROLL:..</h1>
+    <h2 class="center" style="width: 75%; color: #725200; margin-top: 5%; margin-bottom: 10%;" id="cocktail">cocktail </h2>
 
-    <h2 class="center" style="width: 75%; color: #725200; margin-top: 10%; margin-bottom: 10%;" id="cocktail">cocktail
-    </h2>
-
-    <button class="center" style="width: 35%;" onclick="estrazione()">ROLL</button>
+    <button class="center" style="width: 35%;" onclick="estrazione()">roll</button>
 
 
     <footer style="margin-top: 10%;">
