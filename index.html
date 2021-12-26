@@ -4,10 +4,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+    h1 {
+        background: #fdfdfd;
+        color: #171412;
+        width: min-content;
+        margin: 6%;
+        font-size: 64px;
+        padding: 12px;
+    }
+
     p {
-        font-family: Arial;
-        font-style: normal;
-        text-align: center;
+        margin: 6%;
     }
 
     .img-title {
@@ -35,34 +42,36 @@
         margin-right: auto;
     }
 
-    .options {
-        display: inline;
-        text-align: center;
-        margin-left: 5%;
-    }
-
-    .div-opt {
-        margin-left: 33%;
-        margin-right: 33%;
+    .div-sections {
+        display: inline-block;
+        height: fit-content;
+        width: 100%;
         align-items: center;
+        background-color: #171412;
     }
-
 </style>
+
+<!-- blues to use
+    blue: #6281a9
+    darker blue: #3c4861 -->
 
 <html>
 
-<body style="background-color: #200046;">
-    <img class="img-title center" src="imgs/simone-title.png">
+<body style="background-color: #dfd6d2; margin: 0%;">
 
-    <div class="div-opt">
-        <p class="options" style="color: #725200; cursor: pointer;" id="songs">songs</p>
-        <p class="options" style=" color: #725200; cursor: pointer;" id="cocktail">cocktail</p>
+    <div class="div-sections">
+
+        <h1 style="display: inline-block;">SIMONE</h1>
+
+        <p style="display: inline-block; color: #725200; cursor: pointer; font-size: 32px;" id="cocktail">
+            cocktail...</p>
     </div>
 
-    <footer style="margin-top: 10%;">
-        <p style="text-align: center; color: #000; letter-spacing: 0.16em; font-size: 12px;">
-            since 2003<br>
-            all rights reserved
+
+    <footer style="margin: 10%;"">
+        <p style=" text-align: left; color: #000; letter-spacing: 0.16em; font-size: 14px;">
+        since 2003<br>
+        all rights reserved
         </p>
     </footer>
 </body>
