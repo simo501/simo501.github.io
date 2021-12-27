@@ -5,20 +5,27 @@
 
 <style>
     p {
-        font-family: Arial;
         font-style: normal;
         text-align: center;
     }
 
     h1 {
-        font-family: Arial;
+        font-style: normal;
+        text-align: center;
+        font-size: 60px;
+        margin: 8%;
+        color: #fff;
+        background: #171412;
+        width: fit-content;
+    }
+
+    h2 {
         font-style: normal;
         text-align: center;
         font-size: 18px;
     }
 
     li {
-        font-family: Arial;
         font-style: normal;
         text-align: center;
         font-size: 14px;
@@ -27,20 +34,17 @@
         margin: 4px;
     }
 
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
     .img-title {
         opacity: 85%;
         width: 50%;
         height: auto;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
         cursor: pointer;
-    }
-
-    @media all and (max-width: 600px) and (orientation: portrait) {
-        .img-title {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
-        }
     }
 
     .img-title:hover {
@@ -77,12 +81,13 @@
 
 <html>
 
-<body style="background-color: #200046;">
-    <img class="img-title center" src="../imgs/simone-title.png" id="home-title">
+<body style="background-color: #dfd6d2;">
+
+    <h1 class="center"><a href="https://wwsimone.github.io">SIMONE</a></h1>
 
     <img class="center audio-tape" src="../imgs/musicassetta.png">
 
-    <h1 class="center" style=" width: 75%; color: #725200;">My favorite songs</h1>
+    <h2 class="center" style=" width: 75%; color: #725200;">My favorite songs</h2>
 
     <div id="lista-favorite" >
         <li>JOLLY - 24 24</li>
@@ -91,8 +96,8 @@
         <li>LYONZON - Matrix</li>
     </div>
 
-    <footer style="margin-top: 10%;">
-        <p style="text-align: center; color: #000; letter-spacing: 0.16em; font-size: 12px;">
+    <footer style="margin: 10%;">
+        <p style="text-align: left; color: #000; letter-spacing: 0.16em; font-size: 12px;">
             since 2003<br>
             all rights reserved
         </p>
