@@ -32,8 +32,8 @@
     }
     
     canvas {
-        width: 1000px;
-        height: 1000px;
+        width: 500px;
+        height: 500px;
         display: block;
     }
 </style>
@@ -52,7 +52,8 @@
         </p>
     </footer>-->
 
-    <<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js'></script>
+    <<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js'>
+        </script>
         <script src='https://threejs.org/examples/js/controls/TrackballControls.js'></script>
         <script src='https://mamboleoo.be/learnThree/demos/OBJLoader.js'></script>
 
@@ -138,6 +139,15 @@
             /**
              * Load Nimrud model
              **/
+
+            var axis = new THREE.Vector3(4, 0, 7).normalize();
+            var speed = 0.10;
+
+            function animate() {
+                if (object) {
+                    object.rotateOnAxis(axis, speed);
+                }
+            }
 
             function loadModel() {
                 var loader = new THREE.OBJLoader();
