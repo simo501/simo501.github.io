@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>drum machine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+    h1 {
+        color: #242424;
+        margin: 5%;
+        font-size: 38px;
+    }
+    
+    p {
+        margin: 5%;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .drumpad {
+        width: 20%;
+        height: 20%;
+        margin: 1%;
+    }
+</style>
+
+<!-- blues to use
+    blue: #6281a9
+    darker blue: #3c4861 -->
+
+
+<body style="background-color: #dfd6d2; margin: 0%;">
+
+    <h1>drum machine🥁</h1>
+
+    <div style="border-radius: 20px; width: 80%; height: 80%; margin: 0 auto; background: #242424; text-align: center;">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_kick">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_clap">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_hi-hat">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_snare">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_open-hat">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_crash">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_hi-hat-roll">
+        <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_fx">
+    </div>
+
+
+    <audio id="aud_kick" src="../assets/audio/kick.wav"></audio>
+    <audio id="aud_clap" src="../assets/audio/clap.wav"></audio>
+    <audio id="aud_hi-hat" src="../assets/audio/hi-hat.wav"></audio>
+
+</body>
+
+
+<script>
+    function play(element) {
+
+        var id = element.id;
+
+        if (id === "b_kick") {
+            var audio = document.getElementById("aud_kick");
+        } else if (id === "b_clap") {
+            var audio = document.getElementById("aud_clap");
+        } else if (id === "b_hi-hat") {
+            var audio = document.getElementById("aud_hi-hat");
+        } else if (id === "b_snare") {
+
+        } else if (id === "b_open-hat") {
+
+        } else if (id === "b_crash") {
+
+        } else if (id === "b_hi-hat-roll") {
+
+        } else if (id === "b_fx") {
+
+        }
+
+        audio.play();
+    }
+</script>
+
+
+</html>

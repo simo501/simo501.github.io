@@ -1,77 +1,41 @@
 <!DOCTYPE html>
 
-<html>
-
 <head>
-    <title>drum machine</title>
+    <title>simone</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
-<style>
-    h1 {
-        color: #242424;
-        margin: 5%;
-        font-size: 38px;
-    }
-    
-    p {
-        margin: 5%;
-    }
-    
-    a {
-        color: inherit;
-        text-decoration: inherit;
-    }
-    
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .drumpad {
-        width: 20%;
-        height: 20%;
-        margin: 1%;
-    }
-    
-    .drumpad:hover {}
-</style>
+    <style>
+        h1 {
+            color: #6281a9;
+            margin: 5%;
+        }
+        
+        p {
+            margin: 5%;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
 
 <!-- blues to use
     blue: #6281a9
     darker blue: #3c4861 -->
 
+<html>
 
 <body style="background-color: #dfd6d2; margin: 0%;">
 
-    <h1>drum machine</h1>
-
-    <div style="border-radius: 30px; width: 80%; height: 80%; margin: 0 auto; background: #242424; text-align: center;">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_kick">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_clap">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_hi-hat">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_snare">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_open-hat">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_crash">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_hi-hat-roll">
-        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum_pad_not_pressed.png" id="b_fx">
-    </div>
-
-    </div>
-
+    <h1 style="font-size: 50%;">SIMONE</h1>
 </body>
-
-
-<script>
-    function drum_hover(element) {
-        element.setAttribute('src', 'https://simone-10jqka.github.io/imgs/drum_pad_not_pressed.png');
-    }
-
-    function drum_unhover(element) {
-        element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
-    }
-</script>
-
 
 </html>
