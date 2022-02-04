@@ -3,17 +3,15 @@
 <html>
 
 <head>
-    <title>simone</title>
+    <title>drum machine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <style>
     h1 {
-        background: #fdfdfd;
-        color: #171412;
-        width: min-content;
+        color: #242424;
         margin: 5%;
-        font-size: 64px;
+        font-size: 38px;
     }
     
     p {
@@ -31,11 +29,13 @@
         margin-right: auto;
     }
     
-    canvas {
-        width: 500px;
-        height: 500px;
-        display: block;
+    .drumpad {
+        width: 20%;
+        height: 20%;
+        margin: 1%;
     }
+    
+    .drumpad:hover {}
 </style>
 
 <!-- blues to use
@@ -45,143 +45,29 @@
 
 <body style="background-color: #dfd6d2; margin: 0%;">
 
-    <!--<footfer style="margin: 10%;" ">
-        <p style=" text-align: left; color: #000; letter-spacing: 0.16em; font-size: 14px; ">
-        since 2003<br>
-        all rights reserved
-        </p>
-    </footer>-->
+    <h1>drum machine</h1>
 
-    <<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js'>
-        </script>
-        <script src='https://threejs.org/examples/js/controls/TrackballControls.js'></script>
-        <script src='https://mamboleoo.be/learnThree/demos/OBJLoader.js'></script>
+    <div style="border-radius: 30px; width: 80%; height: 80%; margin: 0 auto; background: #242424; text-align: center;">
+        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum pad not pressed.png" id="b_kick">
+        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum pad not pressed.png" id="b_clap">
+        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum pad not pressed.png" id="b_hi-hat">
+        <img class="drumpad" onmouseover="drum_hover(this)" onmouseout="drum_unhover(this)" src="imgs/drum pad not pressed.png" id="b_snare">
+    </div>
 
-        <script>
-            /**
-             * Generate a scene object with a background color
-             **/
-
-            function getScene() {
-                var scene = new THREE.Scene();
-                scene.background = new THREE.Color(0x111111);
-                return scene;
-            }
-
-            /**
-             * Generate the camera to be used in the scene. Camera args:
-             *   [0] field of view: identifies the portion of the scene
-             *     visible at any time (in degrees)
-             *   [1] aspect ratio: identifies the aspect ratio of the
-             *     scene in width/height
-             *   [2] near clipping plane: objects closer than the near
-             *     clipping plane are culled from the scene
-             *   [3] far clipping plane: objects farther than the far
-             *     clipping plane are culled from the scene
-             **/
-
-            function getCamera() {
-                var aspectRatio = window.innerWidth / window.innerHeight;
-                var camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-                camera.position.set(0, 1, -10);
-                return camera;
-            }
-
-            /**
-             * Generate the light to be used in the scene. Light args:
-             *   [0]: Hexadecimal color of the light
-             *   [1]: Numeric value of the light's strength/intensity
-             *   [2]: The distance from the light where the intensity is 0
-             * @param {obj} scene: the current scene object
-             **/
-
-            function getLight(scene) {
-                var light = new THREE.PointLight(0xffffff, 1, 0);
-                light.position.set(1, 1, 1);
-                scene.add(light);
-
-                var ambientLight = new THREE.AmbientLight(0x111111);
-                scene.add(ambientLight);
-                return light;
-            }
-
-            /**
-             * Generate the renderer to be used in the scene
-             **/
-
-            function getRenderer() {
-                // Create the canvas with a renderer
-                var renderer = new THREE.WebGLRenderer({
-                    antialias: true
-                });
-                // Add support for retina displays
-                renderer.setPixelRatio(window.devicePixelRatio);
-                // Specify the size of the canvas
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                // Add the canvas to the DOM
-                document.body.appendChild(renderer.domElement);
-                return renderer;
-            }
-
-            /**
-             * Generate the controls to be used in the scene
-             * @param {obj} camera: the three.js camera for the scene
-             * @param {obj} renderer: the three.js renderer for the scene
-             **/
-
-            function getControls(camera, renderer) {
-                var controls = new THREE.TrackballControls(camera, renderer.domElement);
-                controls.zoomSpeed = 0.4;
-                controls.panSpeed = 0.4;
-                return controls;
-            }
-
-            /**
-             * Load Nimrud model
-             **/
-
-            var axis = new THREE.Vector3(4, 0, 7).normalize();
-            var speed = 0.10;
-
-            function animate() {
-                if (object) {
-                    object.rotateOnAxis(axis, speed);
-                }
-            }
-
-            function loadModel() {
-                var loader = new THREE.OBJLoader();
-                loader.load('assets/gold_text.obj', function(object) {
-                    object.rotation.z = Math.PI;
-                    scene.add(object);
-                    document.querySelector('h1').style.display = 'none';
-                });
-            }
-
-            /**
-             * Render!
-             **/
-
-            function render() {
-                requestAnimationFrame(render);
-                renderer.render(scene, camera);
-                controls.update();
-            };
-
-            var scene = getScene();
-            var camera = getCamera();
-            var light = getLight(scene);
-            var renderer = getRenderer();
-            var controls = getControls(camera, renderer);
-
-            loadModel()
-
-            render();
-
-            animate();
-        </script>
+    </div>
 
 </body>
+
+
+<script>
+    function drum_hover(element) {
+        element.setAttribute('src', 'simone-10jqka.github.io/imgs/drum pad not pressed.png');
+    }
+
+    function drum_unhover(element) {
+        element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
+    }
+</script>
 
 
 </html>
