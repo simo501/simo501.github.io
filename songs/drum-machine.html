@@ -63,6 +63,26 @@
 
 
 <script>
+    document.addEventListener('keydown', function(e) {
+        if (e.keyCode == 81) {
+            var audio = new Audio("../assets/audio/kick.wav").play();
+        } else if (e.keyCode == 87) {
+            var audio = new Audio("../assets/audio/clap.wav").play();
+        } else if (e.keyCode == 69) {
+            var audio = new Audio("../assets/audio/hi-hat.wav").play();
+        } else if (e.keyCode == 82) {
+            var audio = new Audio("../assets/audio/snare.wav").play();
+        } else if (e.keyCode == 65) {
+            var audio = new Audio("../assets/audio/open-hat.wav").play();
+        } else if (e.keyCode == 83) {
+            var audio = new Audio("../assets/audio/crash.wav").play();
+        } else if (e.keyCode == 68) {
+            var audio = new Audio("../assets/audio/hi-hat_roll.wav").play();
+        } else if (e.keyCode == 70) {
+            var audio = new Audio("../assets/audio/fx.wav").play();
+        }
+    });
+
     function play(element) {
 
         var id = element.id;
@@ -84,6 +104,8 @@
         } else if (id === "b_fx") {
             var audio = new Audio("../assets/audio/fx.wav")
         }
+
+
 
         audio.play();
     }
