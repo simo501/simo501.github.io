@@ -45,7 +45,7 @@
 
     <h1 style="text-align: center;">Drum machine</h1>
 
-    <div style="border-radius: 20px; width: 80%; height: 80%; margin: 0 auto; background: #242424; text-align: center;">
+    <div style="border-radius: 20px; width: 70%; height: 80%; margin: 0 auto; background: #242424; text-align: center;">
         <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_kick">
         <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_clap">
         <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_hi-hat">
@@ -56,10 +56,6 @@
         <img class="drumpad" onclick="play(this)" src="../imgs/drum_pad_not_pressed.png" id="b_fx">
     </div>
 
-
-    <audio id="aud_kick" src="../assets/audio/kick.wav"></audio>
-    <audio id="aud_clap" src="../assets/audio/clap.wav"></audio>
-    <audio id="aud_hi-hat" src="../assets/audio/hi-hat.wav"></audio>
 
     <p style="text-align: center; color: #6281a9;">if ur using it on ur iphone rotate for a better exp</p>
 
@@ -72,21 +68,21 @@
         var id = element.id;
 
         if (id === "b_kick") {
-            var audio = document.getElementById("aud_kick");
+            var audio = new Audio("../assets/audio/kick.wav")
         } else if (id === "b_clap") {
-            var audio = document.getElementById("aud_clap");
+            var audio = new Audio("../assets/audio/clap.wav")
         } else if (id === "b_hi-hat") {
-            var audio = document.getElementById("aud_hi-hat");
+            var audio = new Audio("../assets/audio/hi-hat.wav")
         } else if (id === "b_snare") {
-
+            var audio = new Audio("../assets/audio/snare.wav")
         } else if (id === "b_open-hat") {
-
+            var audio = new Audio("../assets/audio/open-hat.wav")
         } else if (id === "b_crash") {
-
+            var audio = new Audio("../assets/audio/crash.wav")
         } else if (id === "b_hi-hat-roll") {
-
+            var audio = new Audio("../assets/audio/hi-hat_roll.wav")
         } else if (id === "b_fx") {
-
+            var audio = new Audio("../assets/audio/fx.wav")
         }
 
         audio.play();
