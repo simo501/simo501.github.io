@@ -13,16 +13,15 @@
         margin: 0%;
         width: 60px;
         text-align: center;
-        background-color: #f4f4f4;
+        background-color: #f2f2f2;
     }
     
     td {
         margin: 0%;
-        border-radius: 5%;
-        width: 60px;
+        border-radius: 0%;
         height: 20px;
         text-align: center;
-        background-color: #f4f4f4;
+        background-color: #f2f2f2;
     }
     
     .center {
@@ -32,37 +31,39 @@
     }
     
     .hit {
-        background-color: aquamarine;
+        background-color: #6FCF97;
     }
     
     .stand {
-        background-color: #BC2315;
+        background-color: #EB5757;
     }
     
     .double {
-        background-color: #E4CD6D;
+        background-color: #F2C94C;
     }
     
     .split {
-        background-color: #0098C2;
+        background-color: #2F80ED;
     }
     
     .title-img {
-        width: 50%;
+        width: 128px;
+        height: 128px;
     }
     
     @media all and (max-width: 600px) and (orientation: portrait) {
         .title-img {
-            width: 100%;
+            width: 128px;
+            height: 128px;
         }
     }
 </style>
 
-<body style="background-color: #232C55;">
-    <img src="../imgs/bj title.png" class="title-img center">
+<body style="background-color: #f8f8f8;">
+    <img src="../imgs/blackjack.png" class="title-img center">
 
-    <div style="width:100%;">
-        <table class="center" style="max-width: 100%">
+    <div style="margin-left: 25%;">
+        <table>
             <tr>
                 <th></th>
                 <th>2</th>
@@ -78,7 +79,7 @@
             </tr>
             <tr>
                 <td>5-8</td>
-                <td class="hit ">H</td>
+                <td class=" hit ">H</td>
                 <td class="hit ">H</td>
                 <td class="hit ">H</td>
                 <td class="hit ">H</td>
@@ -508,7 +509,7 @@
         </table>
     </div>
 
-    <p style="color: black; text-align: center; font-size: 10px;">* H is hit • S is stand • D is double •P is split</p>
+    <p style="color: black; text-align: center; font-size: 10px; ">* H is hit • S is stand • D is double •P is split</p>
 
 </body>
 
