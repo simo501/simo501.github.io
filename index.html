@@ -10,25 +10,30 @@
 </head>
 
 <style>
-
-:root {
-    --pico-border-radius: 0.5rem;
-}
-
+    :root {
+        --pico-border-radius: 0.5rem;
+    }
 </style>
 
 <body>
 
     <header>
-        <div>
-            <h1><img style="width: 36px; height: 36px; border-radius: 1em; margin-right: 1%;" src="imgs/avatar.png">Simo501</h1>
-        </div>
-        <h6>21 years old student 👨🏻‍🎓</h6>
+        <nav>
+            <ul>
+                <h3>Simone Pandolfi</h3>
+            </ul>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+        </nav>
+        <small>📚 Computer Engineering's student, Sapienza University of Rome</small>
+
     </header>
 
 
     <main class="container">
-        <div class="grid">
+        <div class="grid" , id="projects">
             <article>
                 <header>
                     <h3>XNU virtual memory modder</h3>
@@ -36,7 +41,9 @@
                 <p>Very old project with the purpose to mess with macos virtual memory of a certain process</p>
                 <img src="imgs/virtual_mem.png">
                 <hr>
-                <button class="outline" onclick="window.location='https://github.com/simo501/xnu-virtual-memory-modder'">Source Code</button>
+                <button class="outline"
+                    onclick="window.location='https://github.com/simo501/xnu-virtual-memory-modder'">Source
+                    Code</button>
             </article>
             <article>
                 <header>
@@ -45,17 +52,23 @@
                 <p>NS3 simulation did in the occasion of telecom's university exam</p>
                 <img src="imgs/2060933.png" style="width: auto; height: auto;">
                 <hr>
-                <button class="outline" onclick="window.location='https://github.com/simo501/ns3-homework'">Source Code</button>
+                <button class="outline" onclick="window.location='https://github.com/simo501/ns3-homework'">Source
+                    Code</button>
             </article>
             <article>
                 <header>
-                    <h3>Game of Life</h3>
+                    <h3>JS Game Engine</h3>
                 </header>
-                <p>My version of the famous Conway's game I did to do some experience in JS</p>
-                <img src="imgs/game-of-life.png">
+                <p>A simple javascript game engine</p>
+                <img src="imgs/easy-js-ge.png">
                 <hr>
-                <button class="outline" onclick="window.location='https://github.com/simo501/game-of-life'">Source Code</button>
+                <button class="outline"
+                    onclick="window.location='https://github.com/simo501/easy-javascript-game-engine'">Source
+                    Code</button>
             </article>
+        </div>
+        <div id="cv">
+            <!-- <h3>Curriculum Vitae</h3> -->
         </div>
     </main>
 
